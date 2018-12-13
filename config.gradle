@@ -1,0 +1,47 @@
+//文件内部使用
+def appcompat           = "1.0.2"
+def constraintLayout    = "2.0.0-alpha2"
+def junit               = "4.12"
+def runner              = "1.1.0"
+def espresso            = "3.1.0"
+def logger              = "2.2.0"
+def retrofit            = "2.5.0"
+def rxLifecycle         = "3.0.0"
+def rxJava              = "2.2.3"
+def adapterRxJava2      = "2.4.0"
+def converterScalars    = "2.5.0"
+def fastJson            = "1.2.51"
+def NewbieGuide         = "v2.4.0"
+def rxAndroid           = "2.1.0"
+def interceptor         = "3.8.1"
+
+//外部使用的安卓版本相关
+ext {
+    compileSdkVersion         = 28
+    targetSdkVersion          = 28
+    minSdkVersion             = 19
+    versionCode               = 1
+    buildToolsVersion         = "28.0.0"
+    versionName               = "1.0.0"
+    applicationId             = "com.example.hcm.retrofit"
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+}
+
+//compile依赖的第三方库
+ext.deps = [
+        appcompat            : "androidx.appcompat:appcompat:$appcompat",
+        constraintlayout     : "androidx.constraintlayout:constraintlayout:$constraintLayout",
+        junit                : "junit:junit:$junit",
+        runner               : "androidx.test:runner:$runner",
+        espresso             : "androidx.test.espresso:espresso-core:$espresso",
+        logger               : "com.orhanobut:logger:$logger",
+        rxjava               : "io.reactivex.rxjava2:rxjava:$rxJava",
+        rxAndroid            : "io.reactivex.rxjava2:rxandroid:$rxAndroid",
+        adapterRxjava2       : "com.squareup.retrofit2:adapter-rxjava2:$adapterRxJava2",
+        retrofit             : "com.squareup.retrofit2:retrofit:$retrofit",
+        converterGson        : "com.squareup.retrofit2:converter-gson:$retrofit",
+        converterScalars     : "com.squareup.retrofit2:converter-scalars:$converterScalars",
+        interceptor          : "com.squareup.okhttp3:logging-interceptor:$interceptor",
+        fastjson             : "com.alibaba:fastjson:$fastJson",
+        newbieGuide          : "com.github.huburt-Hu:NewbieGuide:$NewbieGuide"
+]

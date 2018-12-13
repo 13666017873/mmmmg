@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">retrofit</string>
+    <string name="hello_retrofit">hello_retrofit</string>
+</resources>

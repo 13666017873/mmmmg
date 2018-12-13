@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion             rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion             rootProject.ext.minSdkVersion
+        targetSdkVersion          rootProject.ext.targetSdkVersion
+        versionCode               rootProject.ext.versionCode
+        versionName               rootProject.ext.versionName
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api deps.appcompat
+    api deps.constraintlayout
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api deps.junit
+    api deps.runner
+    api deps.espresso
+    api deps.logger
+    implementation deps.rxjava
+    implementation deps.adapterRxjava2
+    implementation deps.converterGson
+    implementation deps.fastjson
+    implementation deps.newbieGuide
+    implementation deps.rxAndroid
+    implementation deps.interceptor
+    implementation deps.converterScalars
+}

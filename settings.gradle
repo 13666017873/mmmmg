@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':mg_oneiromancy'
 include ':common'
